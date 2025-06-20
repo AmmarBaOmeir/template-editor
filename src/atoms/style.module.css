@@ -1,0 +1,17 @@
+.primaryIconButton {
+    path {
+        @apply stroke-[#F0F8FF];
+    }
+}
+
+.secondaryIconButton {
+    path {
+        @apply stroke-[#4D637C];
+    }
+}
+
+.dangerIconButton {
+    path {
+        @apply stroke-[#D64545];
+    }
+}
