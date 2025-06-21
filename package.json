@@ -10,12 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@dhmk/zustand-lens": "^5.0.0",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/modifiers": "^9.0.0",
     "@tailwindcss/vite": "^4.1.10",
     "dnd-kit": "^0.0.2",
+    "html2canvas": "^1.4.1",
     "prop-types": "^15.8.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-rnd": "^10.5.2",
+    "react-router-dom": "^7.6.2",
     "tailwindcss": "^4.1.10",
+    "toastr": "^2.1.4",
+    "use-undo": "^1.1.1",
     "vite-plugin-svgr": "^4.3.0",
     "zustand": "^5.0.5"
   },

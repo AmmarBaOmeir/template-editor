@@ -4,9 +4,17 @@ import LockIcon from "../../assets/lock.svg?react";
 import Typography from "../../atoms/Typography";
 import IconButton from "../../atoms/IconButton";
 
-const Element = ({ icon, text, subText, onDelete, onLock, editable }) => {
+const Element = ({
+  icon,
+  text,
+  subText,
+  onDelete,
+  onLock,
+  editable,
+  className,
+}) => {
   return (
-    <div className="w-full flex justify-between items-center">
+    <div className={`w-full flex justify-between items-center ${className}`}>
       {editable && (
         <div className="flex items-center gap-2">
           {onDelete && (
@@ -14,6 +22,7 @@ const Element = ({ icon, text, subText, onDelete, onLock, editable }) => {
               icon={<TrashIcon />}
               type="danger"
               className="!bg-white border-0"
+              onClick={onDelete}
             />
           )}
           {onLock && (
@@ -21,10 +30,11 @@ const Element = ({ icon, text, subText, onDelete, onLock, editable }) => {
               icon={<LockIcon />}
               type="secondary"
               className="!bg-white border-0"
+              onClick={onLock}
             />
           )}
         </div>
-      )}  
+      )}
       <div className="flex items-center justify-end gap-2 w-full p-2">
         <div>
           <Typography text={text} size={18} />
@@ -45,6 +55,7 @@ Element.prototype = {
   onDelete: PropTypes.func,
   onLock: PropTypes.func,
   editable: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 export default Element;

@@ -1,9 +1,18 @@
-const Cards = () => {
-  return (
-    <>
-     Cards
-    </>
-  )
-}
+import { useEditorStore } from "../../store/useEditorStore";
+import Card from "./Card";
 
-export default Cards
+const Cards = () => {
+  const {
+    editor: { templates },
+  } = useEditorStore();
+
+  return <div className="flex items-center gap-4 flex-wrap w-full">
+    {templates.map((template) => {
+      return (
+        <Card data={template} />
+      );
+    })}
+  </div>;
+};
+
+export default Cards;
