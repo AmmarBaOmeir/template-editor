@@ -37,7 +37,7 @@ const PropertiesPanel = ({ setSchema, schema }) => {
           }
           className="col-span-2"
         />
-        <Typography text="حجم الصفحة" size={16} weight={400} />
+        <Typography text="العنوان" size={16} weight={400} />
         <TextInput
           placeholder="حجم الصفحة"
           value={schema.page?.size}
@@ -46,7 +46,7 @@ const PropertiesPanel = ({ setSchema, schema }) => {
           }
           className="col-span-2"
         />
-        <Typography text="العنوان" size={16} weight={400} />
+        <Typography text="حجم الصفحة" size={16} weight={400} />
       </div>
 
       <div className="relative h-[1px] w-full bg-[#E5E7EB]">

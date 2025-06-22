@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import ImageIcon from "../assets/image.svg?react";
 
 const ImageUploader = ({ onImageSelect, defaultImage }) => {
   const [image, setImage] = useState(null);
@@ -51,19 +52,7 @@ const ImageUploader = ({ onImageSelect, defaultImage }) => {
         />
       ) : (
         <>
-          <svg
-            className="w-8 h-8 text-gray-400 mb-2"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3 16.5V19a2 2 0 002 2h14a2 2 0 002-2v-2.5M16.5 12.5L12 8m0 0l-4.5 4.5M12 8v13"
-            />
-          </svg>
+          <ImageIcon className="mb-3" />
           <p className="text-sm text-gray-600">
             اضغط هنا لرفع الصورة أو قم بالسحب والإفلات
           </p>

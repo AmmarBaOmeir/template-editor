@@ -62,8 +62,8 @@ const Editor = () => {
       id: crypto.randomUUID(),
       type: active.data.current.type,
       position: {
-        x: active.rect.current.translated.left,
-        y: active.rect.current.translated.top - 100,
+        x: active.rect.current.translated.left - 200,
+        y: active.rect.current.translated.top - 200,
       },
       props: activeElement,
     };
@@ -85,8 +85,9 @@ const Editor = () => {
 
   return (
     <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-      <div className="flex gap-8 px-5 py-6 bg-[#F4F3F4] w-full"
-      style={{ height: 'calc(100vh - 75px)' }}
+      <div
+        className="flex gap-8 px-5 py-6 bg-[#F4F3F4] w-full"
+        style={{ height: "calc(100vh - 75px)" }}
       >
         <PropertiesPanel setSchema={setSchema} schema={schema} />
         <div className="flex flex-col w-full items-center justify-center relative">
